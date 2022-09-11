@@ -7,9 +7,11 @@ import { HomeComponent } from './pages/home/home.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-export function HttpLoaderFactory(httpClient: HttpClient) {  
-  return new TranslateHttpLoader(httpClient);  
+export function HttpLoaderFactory(httpBulus: HttpClient) {  
+  //return new TranslateHttpLoader(httpClient);  
+  return new TranslateHttpLoader(httpBulus, './assets/i18n/', '.json'); 
 }
+
 
 @NgModule({
   declarations: [
