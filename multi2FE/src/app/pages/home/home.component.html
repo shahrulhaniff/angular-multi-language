@@ -1,0 +1,8 @@
+<p>home works!</p>
+{{meow}}
+
+<h3>{{ 'Dashboard.Title' | translate }}</h3> 
+
+<select #langOption (change)="translate.use(langOption.value)">  
+    <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>  
+</select>  
